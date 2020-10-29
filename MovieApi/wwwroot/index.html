@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Movies</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/util.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="contact1">
+        <div class="container-contact1">
+            <div class="contact1-pic js-tilt" data-tilt>
+                <img src="images/movie.jpg" alt="IMG">
+            </div>
+            <h1>New Movie</h1>
+            <h3>Add</h3>
+            <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                <input type="text" id="add-name" placeholder="New Movie">
+                <input type="submit" value="Add">
+            </form>
+           
+            <div id="editForm">
+                <h3>Edit</h3>
+                <form action="javascript:void(0);" onsubmit="updateItem()">
+                    <input type="hidden" id="edit-id" >
+                    <input type="checkbox" id="edit-isComplete">
+                    <input type="text" id="edit-name">
+                    <input type="submit" value="Save">
+                    <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                </form>
+            </div>
+
+            <p id="counter"></p>
+
+            <table>
+                <tr>
+                    <th>Is Blockbuster?</th>
+                    <th>Movie Name</th>
+                    <th>Plot</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tbody id="todos"></tbody>
+            </table>
+
+            <script src="js/site.js" asp-append-version="true"></script>
+            <script type="text/javascript">
+                getItems();
+            </script>
+        </div>
+    </div>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>New Movie</h1>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="New Movie">
+        <input type="submit" value="Add">
+    </form>
+    <h3>Add Plot</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-plot" placeholder="New Plot">
+        <input type="submit" value="Add">
+    </form>
+
+
+
+
+    <div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <input type="checkbox" id="edit-isComplete">
+            <input type="text" id="edit-name">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Is Complete?</th>
+            <th>Movie Name</th>
+            <th>Plot</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="todos"></tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+   
+    <script type="text/javascript">
+        getItems();
+    </script>
+</body>
+</html>-->
